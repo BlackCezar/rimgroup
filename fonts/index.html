@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="weer">
+            <div class="overlay">
+                <div class="logo">
+                    <img src="imgs/logo.png" alt="">
+                </div>
+                <div onmouseover="spanover(event)" onmouseout="spanout(event)"  class="span span6">6. Нефтегазовый<br> комплекс</div>
+                <div onmouseover="spanover(event)" onmouseout="spanout(event)" onclick="window.location = 'http://tsp-s.ru/'" class="span span5">5. Тригенерация<br>Вентиляция</div>
+                <div onmouseover="spanover(event)" onmouseout="spanout(event)" class="span span4">4. "Умный" город</div>
+                <div onmouseover="spanover(event)" onmouseout="spanout(event)" class="span span3">3. "Умная" модернизация городов, районов, сел</div>
+                <div onmouseover="spanover(event)" onmouseout="spanout(event)" onclick="window.location = 'http://rimstroy.ru/'" class="span span2">2. "Умный" дом под ключ</div>
+                <div onmouseover="spanover(event)" onmouseout="spanout(event)" onclick="window.location = 'https://www.rimmarket.ru/'" class="span span1">1. "Умный" Дом<br> Россыпью</div>
+                <div onmouseover="partover(event)" onmouseout="partout(event)" class="part part6">
+                    <div class="part-inner">
+                        <div class="cont">
+                            <div class="fi"></div>
+                            <img class="li" src="imgs/part6.jpg" background alt="">
+                        </div>
+                    </div>
+                </div>
+                <div onmouseover="partover(event)" onmouseout="partout(event)" onclick="window.location = 'http://tsp-s.ru/'" class="part part5">
+                    <div class="part-inner">
+                        <div class="cont">
+                            <div class="fi"></div>
+                            <img class="li" src="imgs/part5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div onmouseover="partover(event)" onmouseout="partout(event)" class="part part4">
+                    <div class="part-inner">
+                        <div class="cont">
+                            <div class="fi"></div>
+                            <img class="li" src="imgs/part4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div onmouseover="partover(event)" onmouseout="partout(event)" class="part part3">
+                    <div class="part-inner">
+                        <div class="cont">
+                            <div class="fi"></div>
+                            <img class="li" src="imgs/part3.jpg" alt="" class="li">
+                        </div>
+                    </div>
+                </div>
+                <div onmouseover="partover(event)" onmouseout="partout(event)" onclick="window.location = 'http://rimstroy.ru/'" class="part part2">
+                    <div class="part-inner">
+                        <div class="cont">
+                            <div class="fi"></div>
+                            <img class="li" src="imgs/part2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div onclick="window.location = 'https://www.rimmarket.ru/'" onmouseover="partover(event)" onmouseout="partout(event)" class="part part1">
+                    <div class="part-inner">
+                        <div class="cont">
+                            <div class="fi"></div>
+                            <img class="li" src="imgs/part1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="statick">
+            <div class="block">
+                <h2>Торговая деятельность</h2>
+                <p>
+                    <a href="http://rimportal.ru">Интернет-портал</a>
+                    <a href="https://rimmarket.ru/">Интернет-магазин</a>
+                    <a href="https://rimmarket.ru/magaziny/">Сеть магазинов</a>
+                    <a>Коммерция</a>
+                </p>
+            </div>
+            <div class="block">
+                <h2>Производственная деятельность</h2>
+                <p>
+                    <a href="http://tsp-s.ru/">Завод теплоэнергетического оборудования</a>
+                    <a>Промышленное и гражданское строительство</a>
+                </p>
+            </div>
+            <div class="block">
+                <h2>Инвестиции и инновации</h2>
+                <p>
+                    <a>Инвестиционная группа</a>
+                    <a>Инновационная продукция</a>
+                </p>
+            </div>
+        </section>
+    </main>
+<script>
+    window.onload = function() {
+        document.body.style.display = 'block';
+    }
+    function spanover(ev) {
+        el = ev.target;
+        console.log(document.querySelector('.part' + el.className.slice(-1)));
+        document.querySelector('.part' + el.className.slice(-1)).classList.add('parthover');
+    }
+    function spanout(ev) {
+        el = ev.target;
+        document.querySelector('.part' + el.className.slice(-1)).classList.remove('parthover');
+    }
+    function partover(ev) {
+        el = ev.target;
+        console.log(el)
+        el.classList.add('parthover');
+    }
+    function partout(ev) {
+        el = ev.target;
+        el.classList.remove('parthover');
+    }
+    // setTimeout(() => {
+    //     for (partInner of document.querySelectorAll('.part-inner')) {
+    //     partInner.style.height = (Math.ceil(partInner.offsetHeight / 2) * 2) + "px";
+    //     partInner.style.width = (Math.ceil(partInner.offsetWidth / 2) * 2) + "px";
+    // }
+    // }, 2400)
+    // // Цикл приведения слоя к кратности 2пк, чтобы избежать размытия текстового слоя
+    
+</script>
+    <!-- <script src="vue.js"></script>
+    <script src="script.js"></script> -->
+</body>
+</html>

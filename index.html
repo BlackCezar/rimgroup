@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RIM GROUP - Группа компаний для строительства</title>
+    <meta name="description" content="RIMGROUP - строительство умных домой, районов, городов">
+    <meta name="robots" content="all">
+    <meta>
+    <link rel="stylesheet" href="style-test.css">
+</head>
+<body>
+    <main>
+        <section class="weer">
+            <figure class="logo">
+                <img src="imgs/logo.png" alt="">
+            </figure>
+            <div class="spans">
+                <span class="w-span span6">6. Нефтегазовый<br> комплекс</span>
+                <span class="w-span span5">5. Тригенерация<br>Вентиляция</span>
+                <span class="w-span span4">4. "Умный" город</span>
+                <span class="w-span span3">3. "Умная" модернизация городов, районов, сел</span>
+                <span class="w-span span2">2. "Умный" дом под ключ</span>
+                <span class="w-span span1">1. "Умный" Дом<br> Россыпью</span>
+            </div>
+            <div class="overlay">
+                <figure class="part part6">
+                    <div class="fi"><div class="over-bg"></div></div>
+                </figure>
+                <figure class="part part5">
+                    <div class="fi"><div class="over-bg"></div></div>
+                </figure>
+                <figure class="part part4">
+                    <div class="fi"><div class="over-bg"></div></div>
+                </figure>
+                <figure class="part part3">
+                    <div class="fi"><div class="over-bg"></div></div>
+                </figure>
+                <figure class="part part2">
+                    <div class="fi"><div class="over-bg"></div></div>
+                </figure>
+                <figure class="part part1">
+                    <div class="fi"><div class="over-bg"></div></div>
+                </figure>
+            </div>
+        </section>
+        <section class="main-b">
+            <article>
+                <h2>Торговая деятельность</h2>
+                <ul>
+                    <li><a href="http://rimportal.ru">Интернет-портал</a></li>
+                    <li><a href="https://rimmarket.ru/">Интернет-магазин</a></li>
+                    <li><a href="https://rimmarket.ru/magaziny/">Сеть магазинов</a></li>
+                    <li><a href="">Коммерция</a></li>
+                </ul>
+            </article>
+            <article>
+                <h2>Производственная деятельность</h2>
+                <ul>
+                    <li><a href="http://tsp-s.ru/">Завод теплоэнергетического оборудования</a></li>
+                    <li><a href="">Промышленное и гражданское строительство</a></li>
+                </ul>
+            </article>
+            <article>
+                <h2>Инвестиции и инновации</h2>
+                <ul>
+                    <li><a href="">Инвестиционная группа</a></li>
+                    <li><a href="">Инновационная продукция</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <div class="overlay" id="window_ov" data-show="0">
+        <div class="window">
+            <header>
+                <div class="title">Рассылка новостей</div><div class="close" onclick="toggleWindow()"><span>X</span></div>
+            </header>
+            <form >
+                <h3 style="text-align: center">Оформите подписку на наши новости и вы будете в курсе всех изменений</h3>
+                <span>Выберите каталоги:</span>
+                <ul>
+                    <li><input type="checkbox" name="f2" id="f1"><label for="f1">Каталог 1</label></li>
+                    <li><input type="checkbox" name="f2" id="f2"><label for="f2">Каталог 2</label></li>
+                    <li><input type="checkbox" name="f3" id="f3"><label for="f3">Каталог 3</label></li>
+                    <li><input type="checkbox" name="f4" id="f4"><label for="f4">Каталог 4</label></li>
+                </ul>
+                <div style="display: flex; align-items: center;">
+                    <label for="sms"><input oninput="toggleTel(event)" type="checkbox" name="sms" id="sms"> Уведомлять меня о новом номере каталога по СМС</label>
+                </div>
+                <input id="tel" title="Номер телефона для СМС" type="tel" name="tel" placeholder="8 999 999 99 99">
+                <input type="email" title="Почта для рассылки" id="email" placeholder="email" name="email" required>
+                <input type="submit" value="Подписаться" style="font-weight: bold">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <section>
+            <article>
+                <h3>Торговая деятельность</h3>
+                <ul>
+                    <li><a href="http://rimportal.ru">Интернет-портал</a></li>
+                    <li><a href="https://rimmarket.ru/">Интернет-магазин</a></li>
+                    <li><a href="https://rimmarket.ru/magaziny/">Сеть магазинов</a></li>
+                    <li><a href="">Коммерция</a></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Производственная деятельность</h3>
+                <ul>
+                    <li><a href="http://tsp-s.ru/">Завод теплоэнергетического оборудования</a></li>
+                    <li><a href="">Промышленное и гражданское строительство</a></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Инвестиции и инновации</h3>
+                <ul>
+                    <li><a href="">Инвестиционная группа</a></li>
+                    <li><a href="">Инновационная продукция</a></li>
+                </ul>
+            </article>
+            <article>
+                <h3>RIM GROUP</h3>
+                <figure>
+                    <img src="imgs/logo.png" alt="">
+                    <figcaption>Торгово-производственный инвестиционный холдинг</figcaption>
+                </figure>
+            </article>
+        </section>
+        <section>
+            <div class="f-description">Общество с ограниченной ответственностью “RIMGROUP”
+                2019. ИНН 651651616816516. ОГРН 651651651651651561
+            </div>
+            <div class="v-line"></div>
+            <div class="f-subscribe">
+                <span>Будтье в курсе наших усехов</span>
+                <button onclick="toggleWindow()">Подписаться на новостную рассылку</button>
+            </div> 
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
