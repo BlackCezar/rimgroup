@@ -1,51 +1,99 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RIM GROUP - Группа компаний для строительства</title>
-    <meta name="description" content="RIMGROUP - строительство умных домой, районов, городов">
-    <meta name="robots" content="all">
-    <meta>
-    <link rel="stylesheet" href="style-test.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>RIM GROUP - Группа компаний для строительства</title>
+   <meta name="description" content="RIMGROUP - строительство умных домой, районов, городов">
+   <meta name="robots" content="all">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <section class="weer">
-            <figure class="logo">
-                <img src="imgs/logo.png" alt="">
-            </figure>
-            <div class="spans">
-                <span class="w-span span6">6. Нефтегазовый<br> комплекс</span>
-                <span class="w-span span5">5. Тригенерация<br>Вентиляция</span>
-                <span class="w-span span4">4. "Умный" город</span>
-                <span class="w-span span3">3. "Умная" модернизация городов, районов, сел</span>
-                <span class="w-span span2">2. "Умный" дом под ключ</span>
-                <span class="w-span span1">1. "Умный" Дом<br> Россыпью</span>
+   <header>
+      <div class="container">
+         <div class="logo"></div>
+         <nav>
+            <ul>
+               <li>RIMGROUP</li>
+               <li>О Холдинге</li>
+               <li>Сводная информация</li>
+               <li>Сеть направлений</li>
+               <li>Контакты</li>
+            </ul>
+            <form data-show="0">
+               <input type="text" name="" id="" placeholder="Поиск...">
+               <div class="lupa">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" focusable="false">            <path d="M14 2A8 8 0 0 0 7.4 14.5L2.4 19.4a1.5 1.5 0 0 0 2.1 2.1L9.5 16.6A8 8 0 1 0 14 2Zm0 14.1A6.1 6.1 0 1 1 20.1 10 6.1 6.1 0 0 1 14 16.1Z"></path>        </svg>
             </div>
-            <div class="overlay">
-                <figure class="part part6">
-                    <div class="fi"><div class="over-bg"></div></div>
-                </figure>
-                <figure class="part part5">
-                    <div class="fi"><div class="over-bg"></div></div>
-                </figure>
-                <figure class="part part4">
-                    <div class="fi"><div class="over-bg"></div></div>
-                </figure>
-                <figure class="part part3">
-                    <div class="fi"><div class="over-bg"></div></div>
-                </figure>
-                <figure class="part part2">
-                    <div class="fi"><div class="over-bg"></div></div>
-                </figure>
-                <figure class="part part1">
-                    <div class="fi"><div class="over-bg"></div></div>
-                </figure>
+            </form>
+         </nav>
+         <div class="finder">
+            <div class="lupa" onclick="toggleForm()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" focusable="false">            <path d="M14 2A8 8 0 0 0 7.4 14.5L2.4 19.4a1.5 1.5 0 0 0 2.1 2.1L9.5 16.6A8 8 0 1 0 14 2Zm0 14.1A6.1 6.1 0 1 1 20.1 10 6.1 6.1 0 0 1 14 16.1Z"></path>        </svg>
             </div>
-        </section>
-        <section class="main-b">
+            <div class="crest" onclick="toggleForm()"></div>
+            <div class="menu">
+                  <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS"><path d="M10 10H2V3a1 1 0 0 1 1-1h7zm4-8h8v8h-8zm20 8h-8V2h7a1 1 0 0 1 1 1zM2 14h8v8H2zm12 0h8v8h-8zm12 0h8v8h-8zM10 34H3a1 1 0 0 1-1-1v-7h8zm4-8h8v8h-8zm19 8h-7v-8h8v7a1 1 0 0 1-1 1z"></path></svg>
+               </div>
+               <div class="popup"></div>
+         </div>
+
+      </div>
+   </header>
+   <div class="slider">
+      <img src="imgs/sl1-min.jpg" alt="slider1">
+      <img src="imgs/sl2-min.jpg" alt="slider2">
+      <img src="imgs/sl3-min.jpg" alt="slider3">
+   </div>
+   <main>
+      <section>
+         <figure class="logo">
+         </figure>
+         <div class="bgs">
+            <div class="bg-img"></div>
+            <div class="bg-img2"></div>
+         </div>
+         <div class="weer">
+            <div class='part' onmouseenter='bg_normal_do(this);' onmouseleave='bg_normal_undo(this);' onclick='bg_normal_do(this); window.location = "https://www.rimmarket.ru/"'>
+               <div class='part-bg' data-part="1"></div>
+               <div class='part-text'>
+                  1. "Умный" дом <br>Россыпью
+               </div>
+            </div>
+            <div class='part' onmouseenter='bg_normal_do(this);' onmouseleave='bg_normal_undo(this);' onclick='bg_normal_do(this); window.location = "http://rimstroy.ru/"'>
+               <div class='part-bg' data-part="2"></div>
+               <div class='part-text'>
+                  2. "Умный" дом <br>под ключ
+               </div>
+            </div>
+            <div class='part' onmouseenter='bg_normal_do(this);' onmouseleave='bg_normal_undo(this);' onclick='bg_normal_do(this);'>
+               <div class='part-bg' data-part="3"></div>
+               <div class='part-text'>
+                  3. "Умная" модернизация<br>городов, районов, сел
+               </div>
+            </div>
+            <div class='part' onmouseenter='bg_normal_do(this);' onmouseleave='bg_normal_undo(this);' onclick='bg_normal_do(this);'>
+               <div class='part-bg' data-part="4"></div>
+               <div class='part-text'>
+                     4. "Умный" город
+               </div>
+            </div>
+            <div class='part' onmouseenter='bg_normal_do(this);' onmouseleave='bg_normal_undo(this);' onclick='bg_normal_do(this); window.location = "http://tsp-s.ru/"'>
+               <div class='part-bg' data-part="5"></div>
+               <div class='part-text'>
+                  5. Тригенерация<br>Вентиляция
+               </div>
+            </div>
+            <div class='part' onmouseenter='bg_normal_do(this);' onmouseleave='bg_normal_undo(this);' onclick='bg_normal_do(this);'>
+               <div class='part-bg' data-part="6"></div>
+               <div class='part-text'>
+                     6. Нефтегазовый<br>комплекс
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="main-b">
             <article>
                 <h2>Торговая деятельность</h2>
                 <ul>
@@ -70,74 +118,213 @@
                 </ul>
             </article>
         </section>
-    </main>
-    <div class="overlay" id="window_ov" data-show="0">
-        <div class="window">
-            <header>
-                <div class="title">Рассылка новостей</div><div class="close" onclick="toggleWindow()"><span>X</span></div>
-            </header>
-            <form >
-                <h3 style="text-align: center">Оформите подписку на наши новости и вы будете в курсе всех изменений</h3>
-                <span>Выберите каталоги:</span>
-                <ul>
-                    <li><input type="checkbox" name="f2" id="f1"><label for="f1">Каталог 1</label></li>
-                    <li><input type="checkbox" name="f2" id="f2"><label for="f2">Каталог 2</label></li>
-                    <li><input type="checkbox" name="f3" id="f3"><label for="f3">Каталог 3</label></li>
-                    <li><input type="checkbox" name="f4" id="f4"><label for="f4">Каталог 4</label></li>
-                </ul>
-                <div style="display: flex; align-items: center;">
-                    <label for="sms"><input oninput="toggleTel(event)" type="checkbox" name="sms" id="sms"> Уведомлять меня о новом номере каталога по СМС</label>
-                </div>
-                <input id="tel" title="Номер телефона для СМС" type="tel" name="tel" placeholder="8 999 999 99 99">
-                <input type="email" title="Почта для рассылки" id="email" placeholder="email" name="email" required>
-                <input type="submit" value="Подписаться" style="font-weight: bold">
-            </form>
-        </div>
-    </div>
-    <footer>
-        <section>
+   </main>
+   <div class="overlay" id="window_ov" data-show="0">
+         <div class="window">
+             <header>
+                 <div class="title">Рассылка новостей</div><div class="close" onclick="toggleWindow()"><span>X</span></div>
+             </header>
+             <form >
+                 <h3 style="text-align: center">Оформите подписку на наши новости и вы будете в курсе всех изменений</h3>
+                 <span>Выберите каталоги:</span>
+                 <ul>
+                     <li><input type="checkbox" name="f2" id="f1"><label for="f1">Каталог 1</label></li>
+                     <li><input type="checkbox" name="f2" id="f2"><label for="f2">Каталог 2</label></li>
+                     <li><input type="checkbox" name="f3" id="f3"><label for="f3">Каталог 3</label></li>
+                     <li><input type="checkbox" name="f4" id="f4"><label for="f4">Каталог 4</label></li>
+                 </ul>
+                 <div style="display: flex; align-items: center;">
+                     <label for="sms"><input oninput="toggleTel(event)" type="checkbox" name="sms" id="sms"> Уведомлять меня о новом номере каталога по СМС</label>
+                 </div>
+                 <input id="tel" title="Номер телефона для СМС" type="tel" name="tel" placeholder="8 999 999 99 99">
+                 <input type="email" title="Почта для рассылки" id="email" placeholder="email" name="email" required>
+                 <input type="submit" value="Подписаться" style="font-weight: bold">
+             </form>
+         </div>
+     </div>
+   <div class="footer-bg">
+      <img src="imgs/bg1.png" alt=""><img src="imgs/bg2.png" alt="">
+   </div>
+   <footer>
+      <div class="container">
+         <div class="row">
             <article>
-                <h3>Торговая деятельность</h3>
-                <ul>
-                    <li><a href="http://rimportal.ru">Интернет-портал</a></li>
-                    <li><a href="https://rimmarket.ru/">Интернет-магазин</a></li>
-                    <li><a href="https://rimmarket.ru/magaziny/">Сеть магазинов</a></li>
-                    <li><a href="">Коммерция</a></li>
-                </ul>
+               <h3>О компании</h3>
+               <ul><li><a href="">История компании</a></li>
+               <li><a href="">Наши партнеры</a></li>
+               <li><a href="">Вопросы и ответы</a></li>
+               <li><a href="">Отзывы</a></li></ul>
+               <li><a href="">Новости компании</a></li></ul>
+
             </article>
             <article>
-                <h3>Производственная деятельность</h3>
-                <ul>
-                    <li><a href="http://tsp-s.ru/">Завод теплоэнергетического оборудования</a></li>
-                    <li><a href="">Промышленное и гражданское строительство</a></li>
-                </ul>
+               <h3>Каталоги</h3>
+               <div class="footerArticleDouble">
+                  <ul><li><a href="">Стандартные проект</a></li>
+                  <li><a href="">Уникальные проекты</a></li>
+                  <li><a href="">Проекты городов</a></li>
+                  <li><a href="">Проекты районов</a></li></ul>
+                  <ul><li><a href="">Проекты зданий</a></li>
+                     <li><a href="">"Умные" дома</a></li>
+               </div>
+               <div class="tweaks">
+                  <ul style="display: flex;">
+                     <li><a href=""><svg class="Footernav-social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" focusable="false">
+                        <g id="Footernav-icon-facebook">
+                           <path d="M16.2,0c1,0,1.9,0.4,2.6,1.1S20,2.7,20,3.8v12.5c0,1-0.4,1.9-1.1,2.6S17.3,20,16.2,20h-2.4v-7.7h2.6l0.4-3h-3  V7.3c0-0.5,0.1-0.9,0.3-1.1c0.2-0.2,0.6-0.4,1.2-0.4l1.6,0V3.1C16.3,3.1,15.6,3,14.6,3c-1.2,0-2.1,0.3-2.8,1C11,4.8,10.7,5.7,10.7,7  v2.2H8.1v3h2.6V20H3.8c-1,0-1.9-0.4-2.6-1.1S0,17.3,0,16.2V3.8c0-1,0.4-1.9,1.1-2.6S2.7,0,3.8,0H16.2z"></path>
+                        </g></svg></a></li>
+                     <li><a href=""><svg class="Footernav-social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" focusable="false">
+                        <g id="Footernav-icon-twitter">
+                           <path d="M16.7,6.3c-0.5,0.2-1,0.4-1.6,0.4c0.6-0.3,1-0.9,1.2-1.5c-0.6,0.3-1.1,0.6-1.7,0.7C14,5.3,13.4,5,12.6,5  c-0.8,0-1.4,0.3-1.9,0.8C10.1,6.3,9.8,7,9.8,7.7c0,0.3,0,0.5,0.1,0.6C8.8,8.3,7.7,8,6.7,7.5c-1-0.5-1.8-1.2-2.5-2  C4,5.9,3.9,6.4,3.9,6.9c0,1,0.4,1.7,1.2,2.3C4.6,9.1,4.2,9,3.8,8.8v0c0,0.7,0.2,1.2,0.7,1.7c0.4,0.5,1,0.8,1.6,0.9  c-0.3,0.1-0.5,0.1-0.7,0.1c-0.1,0-0.3,0-0.5-0.1c0.2,0.5,0.5,1,1,1.4s1,0.5,1.6,0.5c-1,0.8-2.1,1.2-3.4,1.2c-0.2,0-0.4,0-0.7,0  c1.3,0.8,2.7,1.2,4.2,1.2c1,0,1.9-0.2,2.7-0.5c0.9-0.3,1.6-0.7,2.2-1.2c0.6-0.5,1.1-1.1,1.6-1.8c0.4-0.7,0.8-1.4,1-2.1  c0.2-0.7,0.3-1.5,0.3-2.2c0-0.2,0-0.3,0-0.4C15.8,7.3,16.3,6.8,16.7,6.3z M20,3.8v12.5c0,1-0.4,1.9-1.1,2.6S17.3,20,16.2,20H3.8  c-1,0-1.9-0.4-2.6-1.1S0,17.3,0,16.2V3.8c0-1,0.4-1.9,1.1-2.6S2.7,0,3.8,0h12.5c1,0,1.9,0.4,2.6,1.1S20,2.7,20,3.8z"></path>
+                        </g></svg></a></li>
+                     <li><a href=""><svg class="Footernav-social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" focusable="false">
+                        <g id="Footernav-icon-linkedin">
+                           <path d="M3.1,16.7h3v-9h-3V16.7z M6.3,4.9c0-0.5-0.2-0.8-0.5-1.1C5.5,3.5,5.1,3.4,4.6,3.4S3.7,3.5,3.4,3.8  C3.1,4.1,2.9,4.5,2.9,4.9c0,0.4,0.2,0.8,0.5,1.1s0.7,0.4,1.2,0.4h0c0.5,0,0.9-0.1,1.2-0.4S6.3,5.4,6.3,4.9z M13.9,16.7h3v-5.2  c0-1.3-0.3-2.3-1-3c-0.6-0.7-1.5-1-2.5-1c-1.2,0-2.1,0.5-2.7,1.5h0V7.7h-3c0,0.6,0,3.6,0,9h3v-5.1c0-0.3,0-0.6,0.1-0.7  c0.1-0.3,0.3-0.6,0.6-0.8c0.3-0.2,0.6-0.3,1-0.3c1,0,1.5,0.7,1.5,2V16.7z M20,3.8v12.5c0,1-0.4,1.9-1.1,2.6S17.3,20,16.2,20H3.8  c-1,0-1.9-0.4-2.6-1.1S0,17.3,0,16.2V3.8c0-1,0.4-1.9,1.1-2.6S2.7,0,3.8,0h12.5c1,0,1.9,0.4,2.6,1.1S20,2.7,20,3.8z"></path>
+                        </g></svg></a></li>
+                     <li><a href=""><svg class="Footernav-social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" focusable="false">
+                        <g id="Footernav-icon-instagram">
+                           <path d="M17.7,16.9V8.5H16c0.2,0.5,0.3,1.1,0.3,1.7c0,1.1-0.3,2.1-0.8,3c-0.6,0.9-1.3,1.7-2.3,2.2s-2,0.8-3.1,0.8  c-1.7,0-3.2-0.6-4.4-1.8s-1.8-2.6-1.8-4.3c0-0.6,0.1-1.2,0.3-1.7H2.2v8.4c0,0.2,0.1,0.4,0.2,0.6c0.2,0.2,0.3,0.2,0.6,0.2h13.9  c0.2,0,0.4-0.1,0.6-0.2C17.7,17.3,17.7,17.1,17.7,16.9z M14,10c0-1.1-0.4-2-1.2-2.8c-0.8-0.8-1.7-1.1-2.8-1.1c-1.1,0-2,0.4-2.8,1.1  S6,8.9,6,10s0.4,2,1.2,2.8s1.7,1.1,2.8,1.1c1.1,0,2.1-0.4,2.8-1.1C13.6,12,14,11,14,10z M17.7,5.3V3.1c0-0.2-0.1-0.5-0.3-0.6  c-0.2-0.2-0.4-0.3-0.6-0.3h-2.3c-0.3,0-0.5,0.1-0.6,0.3c-0.2,0.2-0.3,0.4-0.3,0.6v2.1c0,0.3,0.1,0.5,0.3,0.6  c0.2,0.2,0.4,0.3,0.6,0.3h2.3c0.3,0,0.5-0.1,0.6-0.3C17.6,5.7,17.7,5.5,17.7,5.3z M20,2.6v14.9c0,0.7-0.3,1.3-0.8,1.8  c-0.5,0.5-1.1,0.8-1.8,0.8H2.6c-0.7,0-1.3-0.3-1.8-0.8C0.3,18.7,0,18.1,0,17.4V2.6c0-0.7,0.3-1.3,0.8-1.8S1.9,0,2.6,0h14.9  c0.7,0,1.3,0.3,1.8,0.8C19.7,1.3,20,1.9,20,2.6z"></path>
+                        </g></svg></a></li>
+                  </ul>
+               </div>
             </article>
             <article>
-                <h3>Инвестиции и инновации</h3>
-                <ul>
-                    <li><a href="">Инвестиционная группа</a></li>
-                    <li><a href="">Инновационная продукция</a></li>
-                </ul>
+               <h3>Направления</h3>
+               <ul><li><a href="">Rimstroy</a></li>
+               <li><a href="">Rimportal</a></li>
+               <li><a href="">tsp-s</a></li>
             </article>
             <article>
-                <h3>RIM GROUP</h3>
-                <figure>
-                    <img src="imgs/logo.png" alt="">
-                    <figcaption>Торгово-производственный инвестиционный холдинг</figcaption>
-                </figure>
+               <h3>Контакты</h3>
+               <ul><li><a href="">
+                  г. Москва, ул. Нагиатинская, д. 16<br>
+                  Тел.: +7(499) 648-06-65<br>
+                  E-mail: moscow@rimgroup.ru
+               </a></li>
+               <li><a href="">
+                  г. Краснодар, ул. Кубанская набережная, д. 5/8<br>
+                  Моб.: +7(909) 455-88-21<br>
+                  E-mail: fedoseenko@rimgroup.ru
+               </a></li>
+               <li><a href="">
+                  г. Красноярск, ул. Вавилова, д. 2Ж (оф. 606)<br>
+                  Моб.: +7(922) 07-999-17<br>
+                  E-mail: krasnoyarsk@rimgroup.ru
+               </a></li>
+               <li><a href="">
+                  г. Воронеж, ул. Тепличная, д. 4а<br>
+                  Тел./факс: +7(473) 210-70-69<br>
+                  E-mail: oksana@rimgroup.ru
+               </a></li>
+               <li><a href="">
+                  г. Ставрополь, ул. Ленина, д. 392 (офис 208)<br>
+                  Тел./факс: +7(928) 321-03-65 / +7(968) 268-42-91<br>
+                  E-mail: vakharimgroup@mail.ru
+               </a></li></ul>
             </article>
-        </section>
-        <section>
+         </div>
+         <div class="row">
+            <div class="f-description">Общество с ограниченной ответственностью "РИМ-ГРУПП"
+                  2019. <br>ОГРН 1152036000797. ИНН 2002004156. КПП 200201001. ОКПО 91787520. ОКТМО 96602407101. <br>Юр. адрес: 366608, респ. Чеченская, с. Валерик, р-н Ачхой-Мартановский, ул. М.гайрбекова, д. 1
+            </div>
+            <div class="f-subscribe">
+                  <span>Будтье в курсе наших усехов - </span>
+                  <a  href="#" onclick="toggleWindow(event)">Подписаться на новостную рассылку</a>
+              </div> 
+         </div>
+      </div>
+      <section style="display: none">
             <div class="f-description">Общество с ограниченной ответственностью “RIMGROUP”
                 2019. ИНН 651651616816516. ОГРН 651651651651651561
             </div>
             <div class="v-line"></div>
             <div class="f-subscribe">
-                <span>Будтье в курсе наших усехов</span>
+                <span>Будтье в курсе наших успехов </span>
                 <button onclick="toggleWindow()">Подписаться на новостную рассылку</button>
             </div> 
         </section>
-    </footer>
-    <script src="script.js"></script>
+   </footer>
+
+   
+   <script>
+   setTimeout(function(){
+      let weer = document.querySelector('.weer');
+	   weer.children[0].style.transform='rotate(0deg)';
+	   weer.children[1].style.transform='rotate(30deg)';
+	   weer.children[2].style.transform='rotate(60deg)';
+	   weer.children[3].style.transform='rotate(90deg)';
+	   weer.children[4].style.transform='rotate(120deg)';
+	   weer.children[5].style.transform='rotate(150deg)';
+}, 500);
+   function bg_normal_undo(obj){
+      if (obj.children[0].dataset.part == '1') 
+      obj.children[0].style.background='rgba(105, 175, 159, 0.74)';
+      else if (obj.children[0].dataset.part == "5")
+      obj.children[0].style.background='#ec5d21bd';
+      else if (obj.children[0].dataset.part == "6")
+      obj.children[0].style.background='rgba(74, 69, 67, 0.74)';
+      else obj.children[0].style.background='rgba(30, 121, 54, 0.74)';
+   }
+   function bg_normal_do(obj){
+      obj.children[0].style.background='#ec5d2100';
+   }
+
+   function toggleForm() {
+      let form = document.forms[0];
+    if (form.dataset.show == '0') {
+        window.scrollTo(0,0);
+        form.style.display = "flex";
+        form.style.opacity = 1;
+        form.dataset.show = '1';
+       document.querySelector('.finder .lupa').style.display = 'none';
+       document.querySelector('.crest').style.display = 'block';
+         
+        form.children[0].style.animation = "showWindow 0.5s forwards";
+    } else {
+      form.dataset.show = '0';
+      form.children[0].style.animation = "hideWindow 0.5s forwards";
+      document.querySelector('.finder .lupa').style.display = 'block';
+       document.querySelector('.crest').style.display = 'none';
+        setTimeout(() => {
+         form.style.opacity = 0;
+         form.style.display = "none";       
+        }, 500)
+    }
+   }
+
+   function toggleWindow() {
+    let overBg = document.getElementById('window_ov');
+    if (overBg.dataset.show == '0') {
+        window.scrollTo(0,0);
+        overBg.style.display = "flex";
+        overBg.style.opacity = 1;
+        overBg.dataset.show = '1';
+        overBg.children[0].style.animation = "showWindow 0.5s forwards";
+    } else {
+        overBg.dataset.show = '0';
+        overBg.children[0].style.animation = "hideWindow 0.5s forwards";
+        setTimeout(() => {
+        overBg.style.opacity = 0;
+            overBg.style.display = "none";       
+        }, 500)
+    }
+}
+function toggleTel(ev) {
+    let inp = document.getElementById('tel');
+    ev.target.parentElement.parentElement.parentElement.classList.toggle('checked')
+    if (ev.target.classList.toggle('checked')) {
+        setTimeout(() => {
+            inp.style.display = "block";
+            inp.style.animation = "showWindow 0.2s forwards";
+        }, 300)
+    } else {
+        inp.style.animation = "hideWindow 0.2s forwards";
+         setTimeout(() => {
+            inp.style.display = "none";   
+        }, 200)
+            
+    }
+}
+   </script>
 </body>
 </html>

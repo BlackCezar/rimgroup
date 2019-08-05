@@ -1,4 +1,5 @@
-function toggleWindow() {
+function toggleWindow(event) {
+    event.preventDefault();
     let overBg = document.getElementById('window_ov');
     if (overBg.dataset.show == '0') {
         window.scrollTo(0,0);
@@ -45,6 +46,7 @@ function toggleTel(ev) {
 }());
 function spanClick(ev) {
     let spanN = ev.target.className.slice(-1);
+    alert('span click ' + spanN);
     for (span of document.querySelectorAll('.over-bg')) {
         if (span.parentElement.parentElement.className.slice(-1) == spanN) {
             span.style.background = 'transparent';
@@ -53,6 +55,7 @@ function spanClick(ev) {
 }
 function partClick(ev) {
     let spanN = ev.target.parentElement.className.slice(-1);
+    alert('part click ' + spanN);
     for (span of document.querySelectorAll('.over-bg')) {
         if (span.parentElement.parentElement.className.slice(-1) == spanN) {
             span.style.background = 'transparent';
@@ -61,12 +64,16 @@ function partClick(ev) {
 }
 function spanOver(ev) {
     let spanN = ev.target.className.slice(-1);
+    console.log(spanN);
+    alert('SPAN ENTER ' + spanN)
     if (spanN == 'g') {
         ev.target.parentElement.style.background = 'transparent';
     } else document.querySelector('.part' + spanN + ' .over-bg').style.background = 'transparent';
 }
 function partOver(ev) {
     let spanN = ev.target.parentElement.parentElement.className.slice(-1);
+    console.log(spanN);
+    alert('PART ENTER ' +spanN);
     document.querySelector('.part' + spanN + ' .over-bg').style.background = 'transparent';
 }
 function spanOut(ev) {
