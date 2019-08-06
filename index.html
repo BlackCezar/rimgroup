@@ -17,7 +17,7 @@
             <ul>
                <li>RIMGROUP</li>
                <li>О Холдинге</li>
-               <li><span>Производство</span><div class="popup-li">
+               <li onmouseenter="this.children[1].style.display = 'block';" onmouseleave="setTimeout(()=>{this.children[1].style.display =  'none';},200)"><span>Производство</span><div class="popup-li">
                   <ul>
                      <li><a href="#">Проектирование</a></li>
                      <li><a href="#">Завод</a></li>
@@ -25,7 +25,7 @@
                      <li><a href="#">ПТО</a></li>
                   </ul>
                </div></li>
-               
+
                <li>Сеть направлений</li>
                <li>Контакты</li>
             </ul>
@@ -133,20 +133,22 @@
                  <div class="title">Рассылка новостей</div><div class="close" onclick="toggleWindow()"><span>X</span></div>
              </header>
              <form >
-                 <h3 style="text-align: center">Оформите подписку на наши новости и вы будете в курсе всех изменений</h3>
-                 <span>Выберите каталоги:</span>
-                 <ul>
-                     <li><input type="checkbox" name="f2" id="f1"><label for="f1">Каталог 1</label></li>
-                     <li><input type="checkbox" name="f2" id="f2"><label for="f2">Каталог 2</label></li>
-                     <li><input type="checkbox" name="f3" id="f3"><label for="f3">Каталог 3</label></li>
-                     <li><input type="checkbox" name="f4" id="f4"><label for="f4">Каталог 4</label></li>
-                 </ul>
-                 <div style="display: flex; align-items: center;">
-                     <label for="sms"><input oninput="toggleTel(event)" type="checkbox" name="sms" id="sms"> Уведомлять меня о новом номере каталога по СМС</label>
+               <div class="col">
+                <h3>Выбор каталогов:</h3>
+                  <ul>
+                    <li><input type="checkbox" name="cat1" id="f2"><label for="f2">"УМНЫЙ" ДОМ РОССЫПЬЮ</label></li>
+                    <li><input type="checkbox" name="cat2" id="f1"><label for="f1">ТЕПЛОСТРОЙПРОЕКТ-С</label></li>
+                  </ul>
+               </div>
+               <div class="col">
+                 <h3>Ваши данные:</h3>
+                 <div>
+                   <label for="sms" style="display: flex; align-items: center; padding-top: 0.5vw;"><input oninput="toggleTel(event)" type="checkbox" name="sms" id="sms"><span style="display: block">Уведомлять меня о новом номере каталога по СМС</span></label>
                  </div>
-                 <input id="tel" title="Номер телефона для СМС" type="tel" name="tel" placeholder="8 999 999 99 99">
-                 <input type="email" title="Почта для рассылки" id="email" placeholder="email" name="email" required>
+                 <input id="tel" title="Номер телефона для СМС" type="tel" name="tel" placeholder="+7 999 999 99 99">
+                 <input type="email" title="Почта для рассылки" id="email" placeholder="email" name="Email" required>
                  <input type="submit" value="Подписаться" style="font-weight: bold">
+               </div>
              </form>
          </div>
      </div>
@@ -236,24 +238,14 @@
                   2019. <br>ОГРН 1152036000797. ИНН 2002004156. КПП 200201001. ОКПО 91787520. ОКТМО 96602407101. <br>Юр. адрес: 366608, респ. Чеченская, с. Валерик, р-н Ачхой-Мартановский, ул. М.гайрбекова, д. 1
             </div>
             <div class="f-subscribe">
-                  <span>Будтье в курсе наших усехов - </span>
+                  <span>Будтье в курсе наших успехов - </span>
                   <a  href="#" onclick="toggleWindow(event)">Подписаться на новостную рассылку</a>
-              </div> 
+              </div>
          </div>
       </div>
-      <section style="display: none">
-            <div class="f-description">Общество с ограниченной ответственностью “RIMGROUP”
-                2019. ИНН 651651616816516. ОГРН 651651651651651561
-            </div>
-            <div class="v-line"></div>
-            <div class="f-subscribe">
-                <span>Будтье в курсе наших успехов </span>
-                <button onclick="toggleWindow()">Подписаться на новостную рассылку</button>
-            </div> 
-        </section>
-   </footer>
+  <footer>
 
-   
+
    <script>
    setTimeout(function(){
       let weer = document.querySelector('.weer');
@@ -265,7 +257,7 @@
 	   weer.children[5].style.transform='rotate(150deg)';
 }, 500);
    function bg_normal_undo(obj){
-      if (obj.children[0].dataset.part == '1') 
+      if (obj.children[0].dataset.part == '1')
       obj.children[0].style.background='rgba(105, 175, 159, 0.74)';
       else if (obj.children[0].dataset.part == "5")
       obj.children[0].style.background='#ec5d21bd';
@@ -276,7 +268,6 @@
    function bg_normal_do(obj){
       obj.children[0].style.background='#ec5d2100';
    }
-
    function toggleForm() {
       let form = document.forms[0];
     if (form.dataset.show == '0') {
@@ -286,7 +277,7 @@
         form.dataset.show = '1';
        document.querySelector('.finder .lupa').style.display = 'none';
        document.querySelector('.crest').style.display = 'block';
-         
+
         form.children[0].style.animation = "showWindow 0.5s forwards";
     } else {
       form.dataset.show = '0';
@@ -295,7 +286,7 @@
        document.querySelector('.crest').style.display = 'none';
         setTimeout(() => {
          form.style.opacity = 0;
-         form.style.display = "none";       
+         form.style.display = "none";
         }, 500)
     }
    }
@@ -313,7 +304,7 @@
         overBg.children[0].style.animation = "hideWindow 0.5s forwards";
         setTimeout(() => {
         overBg.style.opacity = 0;
-            overBg.style.display = "none";       
+            overBg.style.display = "none";
         }, 500)
     }
 }
@@ -328,9 +319,9 @@ function toggleTel(ev) {
     } else {
         inp.style.animation = "hideWindow 0.2s forwards";
          setTimeout(() => {
-            inp.style.display = "none";   
+            inp.style.display = "none";
         }, 200)
-            
+
     }
 }
    </script>

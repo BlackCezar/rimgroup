@@ -22,7 +22,7 @@ header {
     width: 100%;
     background-color: white;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     position: relative;
     z-index: 3;
 }
@@ -45,39 +45,40 @@ header li:hover .popup-li{
     -moz-animation: showLi 0.2s linear ;
     -o-animation: showLi 0.2s linear ;
     animation: showLi 0.2s linear forwards;
-
 }
 @keyframes showLi {
     0% {
-        display: none;    
+        display: none;
+	opacity: 0;
     } 1% {
-        display: block;    
+        display: block;
         opacity: 0;
     }  100% {
-        display: block;    
+        display: block;
         opacity: 1;
     }
 }
-@-webkit-keyframes showLi {
+@keyframes hideLi {
     0% {
-        display: none;    
-    } 1% {
-        display: block;    
+        display: block;
+	opacity: 1;
+    } 99% {
+        display: block;
         opacity: 0;
     }  100% {
-        display: block;    
-        opacity: 1;
+        display: none;
+        opacity: 0;
     }
 }
 header .popup-li {
-    /* animation: showLi 0.2s linear both; */
+    animation: hideLi 0.2s linear forwards;
     background-color: #f2f2f2;
     border: 1px solid rgb(243, 243, 243);
     position: absolute;
     bottom: 0;
     transform: translateY(100%);
     z-index: 2;
-    display: none;
+display: none;
     left: 0;
     cursor: initial;
 }
@@ -127,7 +128,7 @@ header .popup-li a {
         position: ABSOLUTE;
         width: 50%;
         top: unset;
-        MARGIN: 0 auto; 
+        MARGIN: 0 auto;
     }
     .bg-img {
         left: -14.5vh !important;
@@ -136,20 +137,20 @@ header .popup-li a {
     .bg-img2 {
         left: -50vh !important;
         top: -71vh !important;
-        
+
     }
 }
 header .logo {
     position: unset;
     height: 100%;
-    width: 45px; 
+    width: 45px;
     background-repeat: no-repeat;
     background-size: 221%;
 }
 .container {
     width: 90%;
     max-width: 1300px;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -203,7 +204,7 @@ nav form .lupa {
 }
 nav form input{
     width: 100%;
-    padding: 5px; 
+    padding: 5px;
     border: none;
     background: #f4f4f4;
     outline: none;
@@ -310,13 +311,13 @@ section:first-child {
     align-items: center;
 }
 .weer {
-    width: 47.5vh; 
-    height: 95vh; 
-    position: relative; 
-    margin-left: 12.5vh; 
-    margin-top: 2.5vh; 
-    border-radius: 0px 50vh 50vh 0px; 
-    overflow: hidden; 
+    width: 47.5vh;
+    height: 95vh;
+    position: relative;
+    margin-left: 12.5vh;
+    margin-top: 2.5vh;
+    border-radius: 0px 50vh 50vh 0px;
+    overflow: hidden;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -361,14 +362,14 @@ section:first-child {
     text-align: right;
 }
 .part {
-    transition: transform 1s linear; 
-    width: 100%; 
-    height: 52%; 
-    position: absolute; 
+    transition: transform 1s linear;
+    width: 100%;
+    height: 52%;
+    position: absolute;
     top: -2%;
     left: 0;
-    transform: rotate(0deg); 
-    overflow: hidden; 
+    transform: rotate(0deg);
+    overflow: hidden;
     transform-origin: left bottom;
     clip-path: polygon(0% 100%, 60.1% 0%, 0% 0%);
     -webkit-clip-path: polygon(0% 100%, 60.1% 0%, 0% 0%);
@@ -376,19 +377,19 @@ section:first-child {
     background-repeat: no-repeat;
     background-position: 101% -46%;
     background-size: 136%;
-} 
+}
 .part-bg {
-    transition: all 0.4s; 
-    width: 100%; 
-    height: 100%; 
-    position: absolute; 
+    transition: all 0.4s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     background: rgba(30, 121, 54, 0.74);
     user-select: none;
 }
 .part-text {
-    position: absolute; 
-    color: #fff; 
-    font-size: 2.7vh; 
+    position: absolute;
+    color: #fff;
+    font-size: 2.7vh;
     user-select: none;
     text-shadow: 0px 0px 10px #374b84;
 }
@@ -491,7 +492,7 @@ section:first-child {
 }
 .f-subscribe {
     width: 100%;
-} 
+}
 .f-subscribe button {
     background-color: rgb(0, 0, 0);
     transition: background 0.2s linear;
@@ -524,7 +525,7 @@ footer {
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
     align-items: center;
     color: rgb(153, 153, 153);
 }
@@ -548,7 +549,7 @@ footer .row {
 }
 footer article {
     color: white;
-    padding: 5px 30px; 
+    padding: 5px 30px;
     border-left: 1px solid #333;
     width: 100%;
     box-sizing: border-box;
@@ -624,7 +625,7 @@ footer svg {
 }
 footer .container > .row:nth-child(2) {
     padding: 10px;
-    display: grid; 
+    display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 14px;
 }
@@ -660,13 +661,34 @@ footer .container > .row:nth-child(2) {
 }
 .window {
     background-color: white;
-    width: fit-content;
-    border-radius: 15px;
+    border-bottom: 4px solid;
     padding: 2vw;
     position: absolute;
     top: 50px;
     opacity: 0;
-    width: 50vw;
+    border-radius: 15px;
+    overflow: hidden;
+    /* width: 50vw; */
+}
+.window::after {
+  width: 100%;
+  bottom: 0;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  content: "";
+  left: 0;
+}
+.window .col:first-child {
+  border-right: 1px solid gray;
+}
+.window .col:last-child {
+  padding-left: 1vw;
+}
+@media (min-width: 1440px) {
+  .window {
+    padding: 1.5vw;
+  }
 }
 @keyframes showWindow {
     from {
@@ -702,48 +724,42 @@ footer .container > .row:nth-child(2) {
 .window .close {
     cursor: pointer;
     border-radius: 50%;
-    width: 2.5em;
+    width: 40px;
     font-family: 'shift-main', sans-serif;
-    background: rgb(221, 221, 221);
-    height: 2.5em;
+    background: rgb(241, 242, 247);
+    height: 40px;
     transition: all 0.6s ease 0s;
     z-index: 21;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.6s;
 }
+transition: all 0.6s;
 .window .close span {
     display: block;
     font-size: 1.2em;
     font-weight: 900;
+    color: #5d5d5d;
 }
 .window .close:hover {
+    transform: rotate(180deg);
     animation: shadow_crestik 1s;
 }
 @keyframes shadow_crestik {
     0% {
-        transform: rotate(0deg);
         box-shadow: 0px 0px 0px 0px #00000020;
     }
     100% {
-        transform: rotate(180deg);
         box-shadow: 0px 0px 0px 15px #00000000;
     }
 }
-.window form {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-}
 .window form input {
-    border-radius: 5px;
     outline: none;
     border-color: #EDF3F5;
     border: 1px solid #f1f1f1;
     padding: 1em;
     margin-top: 20px;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
 }
 .window input[type="checkbox"] {
@@ -759,6 +775,14 @@ footer .container > .row:nth-child(2) {
     padding: 0.5em !important;
     margin: 0 1em 0 0!important;
 }
+.window input[type="submit"] {
+  color: #ec5d21;
+  background-color: rgb(243, 243, 243);
+  border-color: rgb(238, 238, 238);
+  font-weight: bold;
+  font-family: 'Alegreya';
+  font-size: 1rem;
+}
 .window input[type="checkbox"]:checked {
     animation: shadow_inp 0.5s;
 }
@@ -770,7 +794,7 @@ footer .container > .row:nth-child(2) {
     top: -0.1em;
     left: 0;
     background: none;
-    transition: all 0.2s linear; 
+    transition: all 0.2s linear;
     box-sizing: border-box;
     clip-path: polygon(85% 26%, 50% 95%, 5% 60%, 15% 50%, 44% 71%, 70% 20%);
 }
@@ -803,16 +827,24 @@ form {
 }
 .window ul {
     padding-left: 0;
+    margin-right: 1vw;
 }
 .window ul li {
     display: flex;
     align-items: center;
-    padding: 1vw 2vw;
-    border-radius: 1vw;
+    padding: 0.5vw 0.3vw;
+    border-bottom: 1px solid rgb(221, 221, 221);
 }
 .window  ul li:hover {
     background-color: #f7f7f7;
 }
-.window  ul li label {
+.window  label {
     cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.window form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
